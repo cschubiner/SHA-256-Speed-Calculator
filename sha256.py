@@ -130,14 +130,9 @@ def hash(message):
 	return result
 
 #//	line = stdin.readline()
-print "Clay's SHA-256 Speed Calculator"
+print "--- Clay's SHA-256 Speed Calculator ---"
 print "Calculating 451937580 SHA-256 hashes..."
 timeTaken = timeit.timeit('hash(str(i) for i in range(45193758))', number=10)
-
-print "It took " + str(timeTaken) + " seconds"
-print "Your computer can calculate " + str(451937580/timeTaken/1000000) + " million hashes per second"
-
+print "It took " + str(timeTaken) + " seconds."
+print "Your computer can calculate " + str(451937580/timeTaken/1000000) + " million hashes per second."
 print "Done!"
-
-
-
