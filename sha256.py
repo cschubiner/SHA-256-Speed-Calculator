@@ -1,4 +1,5 @@
 import struct
+import timeit
 
 from sys import stdin
 
@@ -128,13 +129,15 @@ def hash(message):
 	
 	return result
 
-while 1: 
-	line = stdin.readline()
+#//	line = stdin.readline()
+print "Clay's SHA-256 Speed Calculator"
+print "Calculating 451937580 SHA-256 hashes..."
+timeTaken = timeit.timeit('hash(str(i) for i in range(45193758))', number=10)
 
-	if len(line) > 0:
-		print hash(line.strip().decode('hex_codec')).encode('hex_codec')
-	else:
-		break	
+print "It took " + str(timeTaken) + " seconds"
+print "Your computer can calculate " + str(451937580/timeTaken/1000000) + " million hashes per second"
+
+print "Done!"
 
 
 
