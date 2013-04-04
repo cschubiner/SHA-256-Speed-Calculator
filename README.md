@@ -1,4 +1,4 @@
-SHA256
+SHA-256 Speed Calculator for Bitcoin Mining Revenue Estimation
 ======
 
 This Python program simply calculates a large number of SHA-256 hashes to determine how quickly your computer can calculate hashes. Results are returned in millions of hashes calculated per second.
